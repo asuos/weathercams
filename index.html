@@ -12,9 +12,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/libs/bootstrap/less/bootstrap.less" rel="stylesheet/less" type="text/css">
-    <link href="/libs/bootstrap/less/responsive.less" rel="stylesheet/less" type="text/css">
-    <link href="/libs/bootstrap/docs/assets/css/docs.css" rel="stylesheet">
+    <link href="libs/bootstrap/less/bootstrap.less" rel="stylesheet/less" type="text/css">
+    <link href="libs/bootstrap/less/responsive.less" rel="stylesheet/less" type="text/css">
+    <link href="libs/bootstrap/docs/assets/css/docs.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -43,15 +43,15 @@
           <a class="brand" href="#">ASU Live Weather Cams</a>
           <div class="nav-collapse">
             <ul class="nav pull-left">
-              <li class="active"><a href="#">Stanford Mall</a></li>
-              <li><a href="#parkinglot">Parking Lot</a></li>
-              <li><a href="#about">About</a></li>
+              <li class="active"><a href="/cam/">Stanford Mall</a></li>
+              <li><a href="/parkinglot/">Parking Lot</a></li>
+              <!--<li><a href="/about/">About</a></li>-->
               <li><a href="https://www.facebook.com/ASUWeatherCam">Like us on Facebook</a></li>
             </ul>
             <ul class="nav pull-right">
-              <li><a href="http://weather.appstate.edu/">It is currently: 35.5 F</a></li>
+              <li><a href="http://weather.appstate.edu/">It is currently: <span id="temp">NaN</span> F in Boone, NC</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
@@ -59,19 +59,19 @@
     <div class="container">
       <div class="row">
         <div id="player">Loading...</div>
-        <script type="text/javascript">
-          var flashvars = {
-            streamer: 'rtmp://streams.appstate.edu/live/',
-            file: 'weatherstream1',
-            'controlbar': 'over',
-            'autostart': 'true',
-          };
-          swfobject.embedSWF('player.swf', 'player', '940', '529', '9.0.115', 'false', flashvars,
-            {allowfullscreen: 'true', allowscriptaccess: 'always'},
-            {id: 'jwplayer', name: 'jwplayer'}
-          );
-        </script>
       </div>
+      <script type="text/javascript">
+        var flashvars = {
+          streamer: 'rtmp://streams.appstate.edu/live/',
+          file: 'weatherstream1',
+          'controlbar': 'over',
+          'autostart': 'true',
+        };
+        swfobject.embedSWF('player.swf', 'player', '940', '529', '9.0.115', 'false', flashvars,
+          {allowfullscreen: 'true', allowscriptaccess: 'always'},
+          {id: 'jwplayer', name: 'jwplayer'}
+        );
+      </script>
 
     </div> <!-- /container -->
 
@@ -79,19 +79,20 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="/libs/js/less-1.2.1.min.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-transition.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-alert.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-modal.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-dropdown.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-scrollspy.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-tab.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-tooltip.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-popover.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-button.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-collapse.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-carousel.js"></script>
-    <script src="/libs/bootstrap/js/bootstrap-typeahead.js"></script>
+    <script src="libs/js/less-1.2.1.min.js"></script>
+    <script src="libs/js/general.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-button.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="libs/bootstrap/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>
